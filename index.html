@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown to August</title>
+    <title>Countdown to August 18</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -38,21 +38,21 @@
     </style>
 </head>
 <body>
-    <h1>💖 Countdown to August 💖</h1>
+    <h1>💖 Countdown to August 18 💖</h1>
     <div class="emoji">💕 🌸 💞</div>
     <div id="countdown">Loading...</div>
     <footer>Love is in the air! 🌹</footer>
     <script>
         function updateCountdown() {
             const today = new Date();
-            const targetDate = new Date(today.getFullYear(), 7, 1); // August 1
-            if (today.getMonth() > 7) {
+            const targetDate = new Date(today.getFullYear(), 7, 18); // August 18
+            if (today >= targetDate) {
                 targetDate.setFullYear(today.getFullYear() + 1);
             }
             const diff = targetDate - today;
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const minutes = Math.floor((diff % (1000 * 60)) / (1000 * 60));
             const seconds = Math.floor((diff % (1000 * 60)) / 1000);
             document.getElementById('countdown').innerHTML =
                 `${days} Days, ${hours} Hours, ${minutes} Minutes, ${seconds} Seconds`;
